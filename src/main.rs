@@ -1,3 +1,9 @@
+struct Student <'a> {
+    roll_no: u8,
+    name: &'a str,
+    age: u8,
+}
+
 fn main(){
     let mut x = 5;
     x += 3;
@@ -12,7 +18,10 @@ fn next_birthday(name: &str, age: u8) {
 
 fn square_maker(number: u8) -> u8{number * number}
 
-next_birthday("Ramesh", 21);
+let ramesh = Student{name: "Ramesh", age: 21, roll_no: 1};
+
+next_birthday(ramesh.name, ramesh.age);
+
 next_birthday("Umesh", 27);
 
 square_maker(1);
