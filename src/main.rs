@@ -39,8 +39,10 @@ next_birthday(ramesh.name, ramesh.age);
 
 // ownership name change
 let name = String::from("Umesh");
-next_birthday(name, 27);
-// next_birthday(name, 28);
+
+// add clone and make it run
+next_birthday(name.clone(), 27);
+next_birthday(name, 28);
 
 square_maker(1);
 square_maker(11);
