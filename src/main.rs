@@ -18,8 +18,17 @@ fn next_birthday(name: &str, age: u8) {
 
 fn square_maker(number: u8) -> u8{number * number}
 
-let ramesh = Student{name: "Ramesh", age: 21, roll_no: 1};
+// ownership
 
+let mut greet = String::from("hello");
+greet.push_str(" there!");
+println!("I say, {}", greet);
+
+
+
+// struct
+
+let ramesh = Student{name: "Ramesh", age: 21, roll_no: 1};
 next_birthday(ramesh.name, ramesh.age);
 
 next_birthday("Umesh", 27);
