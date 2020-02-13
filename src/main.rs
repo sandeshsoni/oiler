@@ -52,11 +52,23 @@ fn pluralise(mut input_word: String) -> String {
    return input_word;
 }
 
+// with borrowing concept
+fn pluralise_with_borrow(input_word: &str) -> String {
+    input_word.to_owned() + "s"
+}
+
 // fn to pluralise input
 let word = String::from("book");
 println!("I have one {}, you have two {}",
     word.clone(),
     pluralise(word)
 );
+
+let word2 = String::from("pen");
+println!("I have one {}, you have two {}",
+    word2,
+    pluralise_with_borrow(&word2)
+);
+
 
 }
