@@ -47,4 +47,16 @@ next_birthday(name, 28);
 square_maker(1);
 square_maker(11);
 
+fn pluralise(mut input_word: String) -> String {
+   input_word.push_str("s");
+   return input_word;
+}
+
+// fn to pluralise input
+let word = String::from("book");
+println!("I have one {}, you have two {}",
+    word.clone(),
+    pluralise(word)
+);
+
 }
